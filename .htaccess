@@ -1,0 +1,74 @@
+### Symphony 2.3.x ###
+Options +FollowSymlinks -Indexes
+
+<IfModule mod_rewrite.c>
+
+	RewriteEngine on
+	RewriteBase /
+
+	### SECURITY - Protect crucial files
+	RewriteRule ^manifest/(.*)$ - [F]
+	RewriteRule ^workspace/(pages|utilities)/(.*)\.xsl$ - [F]
+	RewriteRule ^(.*)\.sql$ - [F]
+	RewriteRule (^|/)\. - [F]
+
+	### DO NOT APPLY RULES WHEN REQUESTING "favicon.ico"
+	RewriteCond %{REQUEST_FILENAME} favicon.ico [NC]
+	RewriteRule .* - [S=14]
+	
+	### LESS RULES
+	RewriteRule ^less\/(.+\.less)$ extensions/less_compiler/lib/less.php?param=$1 [L,NC]
+	
+	### IMAGE RULES
+	RewriteRule ^image\/(.+\.(jpg|gif|jpeg|png|bmp))$ extensions/jit_image_manipulation/lib/image.php?param=$1 [L,NC]
+	
+	### CHECK FOR TRAILING SLASH - Will ignore files
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_URI} !/$
+	RewriteCond %{REQUEST_URI} !(.*)/$
+	RewriteRule ^(.*)$ $1/ [L,R=301]
+
+	### URL Correction
+	RewriteRule ^(symphony/)?index.php(/.*/?) $1$2 [NC]
+
+	### ADMIN REWRITE
+	RewriteRule ^symphony\/?$ index.php?mode=administration&%{QUERY_STRING} [NC,L]
+
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^symphony(\/(.*\/?))?$ index.php?symphony-page=$1&mode=administration&%{QUERY_STRING}	[NC,L]
+
+	### FRONTEND REWRITE - Will ignore files and folders
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*\/?)$ index.php?symphony-page=$1&%{QUERY_STRING}	[L]
+
+</IfModule>
+######
+
+# !!! COMPRESSION AND CACHING RULES - UNCOMMENT IN PRODUCTION AND TEST !!! 
+
+### Compression ###
+#<IfModule mod_deflate.c>
+#    AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript
+#    BrowserMatch ^Mozilla/4 gzip-only-text/html
+#    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+#    BrowserMatch \bMSI[E]\s7 !no-gzip !gzip-only-text/html
+#</IfModule>
+####
+
+### Caching ###
+#<IfModule mod_headers.c>
+#    Header append Vary Accept-Encoding
+#    FileETag None
+#</IfModule>
+#<IfModule mod_expires.c>
+#    ExpiresActive On
+#    ExpiresDefault "modification plus 3 months"
+#    Header unset Cache-Control
+#</IfModule>
+###
+
+### Default Domain with/without WWWs ###
+#RewriteCond %{HTTP_HOST} ^domain.com.au$ [NC]
+#RewriteRule ^(.*)$ http://www.domain.com.au/$1 [R=301,L]

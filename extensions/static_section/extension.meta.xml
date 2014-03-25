@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="static_section" status="released" xmlns="http://symphony-cms.com/schemas/extension/1.0">
+	<name>Static Section</name>
+	<description>Static Sections simplify the process of editing field collections that should only exist once (or a limited number) in Symphony.</description>
+	<repo type="github">https://github.com/knupska/static_section</repo>
+	<url type="discuss">http://symphony-cms.com/discuss/thread/26297/</url>
+	<types>
+		<type>Interface</type>
+	</types>
+	<authors>
+		<author>
+			<name github="knupska" symphony="Knupska">Nathan Martin</name>
+			<website>http://knupska.com</website>
+		</author>
+		<author>
+			<name github="" symphony="">Rainer Borene</name>
+			<website>http://rainerborene.com</website>
+		</author>
+		<author>
+			<name github="vladG" symphony="vladG">Vlad Ghita</name>
+			<email>vlad_micutul@yahoo.com</email>
+		</author>
+		<author>
+			<name github="Solutions-Nitriques" symphony="nitriques" twitter="nitriques">Solutions Nitriques</name>
+			<website>http://www.nitriques.com/open-source/</website>
+		</author>
+		<author>
+			<name github="DeuxHuitHuit" symphony="" twitter="DeuxHuitHuit">Deux Huit Huit</name>
+			<website>http://www.deuxhuithuit.com</website>
+		</author>
+	</authors>
+	<releases>
+		<release version="1.8.1" date="2012-10-26" min="2.3">
+			- made redirectRules method public
+			- Added the getLimit method
+		</release>
+		<release version="1.8" date="2012-06-26" min="2.3">
+			- Update for Symphony 2.3
+		</release>
+		<release version="1.7.1" min="2.2.1" max="2.2.5">
+			- updates from Vlad and other bug fixes
+		</release>
+		<release version="1.7" min="2.2.1" max="2.2.5">
+			- added a 'limit' setting
+			- refactored the install code, use the new Symphony::Database() pointer for queries
+		</release>
+		<release version="1.6.1" min="2.2.1" max="2.2.5">
+			- when static section, `&lt;h2&gt;` element from `publish/edit` and `publish/new` page contains section name
+			- refactored the code
+		</release>
+		<release version="1.6" min="2.2.1" max="2.2.5">
+			- rewrite for Symphony 2.2.1 new delegates
+		</release>
+		<release version="1.5" date="2009-12-11" min="2.0.6" max="2.1" />
+	</releases>
+</extension>

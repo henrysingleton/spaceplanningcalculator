@@ -1,0 +1,278 @@
+@margin-bottom: 0.7em;
+@margin-left: 2em;
+
+.formatted {
+	.body-font;
+	-webkit-text-size-adjust: 100%;
+	text-rendering: optimizeLegibility;
+	//-webkit-font-smoothing: antialiased;
+}
+
+.formatted p,
+p.formatted {
+	.body-font;
+	margin-bottom: @margin-bottom;
+}
+
+
+/* @group Links */
+
+	.formatted a {
+		color: #b4c218;	
+	}
+	
+	.formatted a:visited {
+		color: @primary;
+	}
+	
+	.formatted a:hover {
+		color: saturate(@primary, 30%);
+		text-decoration: underline;
+	}
+	
+	.formatted a:active {
+		color: saturate(@primary, 50%);
+	}
+
+/* @end */
+
+/* @group Inline Styles */
+
+	.formatted i,
+	.formatted em {
+		font-style: italic;
+	}
+	
+	.formatted b,
+	.formatted strong {
+		color: black;
+	}
+	
+	.formatted em strong {
+		font-style: italic;
+	}
+	
+	
+	.formatted abbr,
+	.formatted acronym {
+		letter-spacing: 1px
+	}
+	
+	.formatted code,
+	.formatted p code {
+		font-family: "Lucida Console", Monaco, monospace;
+		white-space: pre;
+	}
+	
+	.formatted small {
+		font-size: 80%;
+	}
+	
+	.formatted strike {
+		text-decoration: line-through;
+	}
+
+/* @end */
+
+/* @group Misc */
+
+	.formatted hr {
+		height: 1px;
+		overflow: hidden;
+		background: @secondary;
+		border: none;
+	}
+	
+	.formatted blockquote {
+		margin-bottom: @margin-bottom;
+		margin-top: @margin-bottom*2;
+		margin-left: @margin-left;
+		font-style: italic;
+	}
+	
+	.formatted blockquote + cite {
+		margin-bottom: @margin-bottom*2;
+		margin-left: @margin-left;
+		position: relative;
+		display: block;
+		font-weight: bold;
+	}
+	
+	.formatted figcaption {
+		font-size: 13px;
+		padding: 10px;
+	}
+	
+	.formatted time {
+		
+	}
+
+/* @end */
+
+/* @group Headings */
+	
+	/*
+		All formatted headings have the exact same style. No reason to have multiple heading levels for this site.
+	*/
+	
+	.formatted h1,
+	.formatted h2,
+	.formatted h3,
+	.formatted h4,
+	.formatted h5,
+	.formatted h6,
+	h1.formatted,
+	h2.formatted,
+	h3.formatted,
+	h4.formatted,
+	h5.formatted,
+	h6.formatted  {
+		font-family: @sub-heading-font-face;
+		line-height: 1em;
+		margin-bottom: 0.5em;
+		margin-top: 2em;
+		font-size: 16px;
+		text-transform: uppercase;
+		color: #727272;
+
+	}
+	.formatted h1,
+	h1.formatted {
+		font-family: @heading-font-face;
+		font-size: 180%;
+		color: black;
+	}
+	
+	.formatted h2,
+	h2.formatted {
+		font-size: 120%;
+		color: black;
+	}
+	
+	.formatted h3,
+	h3.formatted {	
+		font-size: 120%;
+	}
+	
+	.formatted h4,
+	h4.formatted {
+		font-size: 120%;
+	}
+	
+	.formatted h5,
+	h5.formatted {
+		font-size: 120%;
+	}
+	
+	.formatted h6,
+	h6.formatted {
+		font-size: 110%;
+	}
+	
+	.formatted h1 a,
+	.formatted h2 a,
+	.formatted h3 a,
+	.formatted h4 a,
+	.formatted h5 a {
+		text-decoration: none;
+		color: #727272;
+	}
+
+/* @end */
+
+/* @group Lists */
+
+	.formatted ul ul,
+	.formatted ol {
+		margin: 0 0 @margin-bottom @margin-left;
+	}
+	
+	.formatted ul {
+		margin: 0 0 @margin-bottom @margin-left/2;
+	}
+	
+	.formatted ol > li {
+		list-style: decimal;
+	}
+	
+	.formatted ul li {
+		list-style: disc;
+	}
+	
+	.formatted ol ol > li {
+		list-style: lower-alpha;
+	}
+	
+	.formatted ol ol ol > li {
+		list-style: lower-roman;
+	}
+	
+	.formatted ul ul ul > li {
+		list-style: square;
+	}
+	
+	.formatted ul ul,
+	.formatted ul ol,
+	.formatted ol ol,
+	.formatted ol ul {
+		margin-bottom: 0;
+	}
+
+/* @end */
+
+
+/* @group Table Styles */
+
+	.formatted table {
+		margin-bottom: @margin-bottom;
+		width: 100%;
+		margin-top: 30px;
+		th {
+			line-height: 1;
+			text-align: left;
+			font-family: @heading-font-face;
+			text-transform: uppercase;
+			font-size: 11px;
+			padding-top: 4px;
+		}
+		td {
+			padding: 0px 15px;
+			font-size: 14px;
+			line-height: 1.5;
+			vertical-align: middle;	
+			padding-bottom: 20px;
+			p {
+				line-height: 1.5;
+			}
+		}
+	}
+	
+/* @end Table Styles */
+
+/* @group Basic Listing */
+
+	.basic-listing {
+		margin-bottom: @margin-bottom;
+	}
+	
+	.basic-listing ul {
+		margin: 0;
+	}
+	
+	.basic-listing ul li {
+		list-style-type: none;
+		padding: 15px;
+		margin-bottom: 20px;
+		overflow: hidden;
+	}
+	
+	.basic-listing ul li img {
+		float: left;
+	}
+	
+	.basic-listing ul li div {
+		width: 450px;
+		float: left;
+	}
+
+/* @end Basic Listing */

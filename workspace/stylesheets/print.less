@@ -1,0 +1,64 @@
+/* @group Print Colours */
+
+	@primary:	#000000; /*black*/
+	@secondary:	#222222; /*dark grey*/
+	@tertiary:	#444444; /*light grey*/
+
+/* @end */
+
+/* @group Fonts */
+	
+	/*define fat font stacks*/
+	@heading-font-face: Helvetica, Arial, Sans-serif;
+	@body-font-face: Georgia, Times, serif;
+	@navigation-font-face: Helvetica, Arial, Sans-serif;
+	
+	/*define font colours*/
+	@body-font-colour: @primary;
+	
+	/* body font mix-in. Used on body, .formatted and wherever else you deem necessary*/
+	.body-font {
+		font-family: @body-font-face;
+		color: @body-font-colour;
+		line-height: 1.5em;
+		font-size: 12pt; /*measured in pt for print. Doesnt really matter but whatever*/
+	}
+	
+/* @end */
+
+/* @group Import */
+	
+	//@import "common/reset.less";
+	//@import "common/formatted.less";
+
+/* @end */
+
+/* @group Specific styling overrides */
+
+	.formatted ul > li {
+		list-style: disc;
+		margin-bottom: 0.2em;
+		background: none;
+		padding-left: auto;
+		margin-left: @margin-left;
+	}
+	
+/* @end */
+
+/* @group Hiding Elements */
+
+	#admin-edit,
+	#content-nav,
+	#main-navigation,
+	#main-header,
+	#home-feature,
+	#content-header h2,
+	#social-media-buttons,
+	#ancillary-navigation,
+	#main-footer,
+	#breadcrumbs,
+	#side-nav { 
+		display: none !important; 
+	}	
+
+/* @end */

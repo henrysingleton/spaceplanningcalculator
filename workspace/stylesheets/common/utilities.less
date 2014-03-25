@@ -1,0 +1,39 @@
+.wai {
+	height: 1px;
+	left: -9999px;
+	position: absolute;
+	width: 1px;
+}
+
+.wai-text {
+	text-indent: -999em;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearer {
+	width: 100%;
+	height: 1px;
+	clear: both;
+	overflow: hidden;
+	float: none;
+}

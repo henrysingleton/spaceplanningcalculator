@@ -1,0 +1,24 @@
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5) {
+		.needle {
+			background-image: url(/workspace/images/needle@2x.png);
+			background-size:11px 245px;
+		}
+}
+
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+	only screen and (-o-min-device-pixel-ratio: 3/2),
+	only screen and (min--moz-device-pixel-ratio: 1.5),
+	only screen and (min-device-pixel-ratio: 1.5) {
+		.barometer-mask {
+			background-image: url(/workspace/images/barometer-mask@2x.png);
+			background-size:540px 540px;
+		}
+}

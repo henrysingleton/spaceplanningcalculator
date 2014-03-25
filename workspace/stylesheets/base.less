@@ -1,0 +1,206 @@
+
+/* @group Imports */
+
+	/* Loading up the pure CSS framework */
+	@import "common/pure-min.less";
+	@import "common/pure-skin-spc.less";
+
+	@import "common/edit-links.less";		
+/* @end */
+
+/* @group Colours*/
+	
+	@primary: #06518e;
+
+/* @end */
+
+
+/* @group Fonts */
+	
+	/*define font stacks*/
+	@heading-font-face: 	AauxNext, Arial, Helvetica, Sans-serif;
+	@sub-heading-font-face: Arial, Helvetica, Sans-serif;
+	@body-font-face: 		Arial, Helvetica, Sans-serif;
+	@navigation-font-face: 	Arial, Helvetica, Sans-serif;
+	
+	/*define font colours*/
+	@body-font-colour: #333;
+	
+	/* body font mix-in. Used on body, .formatted and wherever else you deem necessary*/
+	.body-font {
+		font-family: @body-font-face;
+		color: @body-font-colour;
+		line-height: 1.65em;
+		font-size: 14px;
+		font-weight: normal;
+	}
+	
+	.formatted {
+		.body-font
+	}
+	
+	.navigation-font {
+		font-family: @navigation-font-face;
+		font-weight: bold;
+		color: #727272;
+		font-size: 11px;
+		text-transform: uppercase;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		letter-spacing: 1px;
+	}
+	
+	.ancillary-navigation-font {
+		font-family: @navigation-font-face;
+		font-weight: bold;
+		color: black;
+		font-size: 11px;
+		text-transform: uppercase;
+		text-decoration: none;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+		letter-spacing: 1px;
+	}
+	
+	/* @group Headings */
+
+		h1, h2, h3, h4, h5, h6 {
+			font-family: @heading-font-face;
+			color: @primary;
+			-webkit-font-smoothing: antialiased;
+		}
+		
+		h1 {
+			font-family: @heading-font-face;
+			font-weight: normal;
+			color: @primary;
+			font-size: 22px;
+			line-height: 1;
+			overflow: visible;
+			text-transform: uppercase;
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+			letter-spacing: 1px;
+		}
+		
+		h2 {
+			font-family: @sub-heading-font-face;
+			color: @primary;
+			font-size: 17px;
+		}
+		
+		h3, h4, h5, h6 {
+			color: #727272;
+			font-weight: bold;
+			font-size: 16px;
+			text-transform: uppercase;
+		}
+		
+	/* @end Headings */	
+
+/* @end Fonts */
+
+/* @group Layout */
+	
+	body {
+		background: #eeeeee;
+	}
+	
+	.container {
+		font-size: 85%;
+		/* max-width: 1000px; */
+		width: 1000px;
+		background: white;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+	
+	#shadow-container {
+		box-shadow: 0px 0px 3px 3px #d4d4d4;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+	
+	.wrapper {
+		padding: 0 100px;
+	}
+	
+	.main-content-wrapper {
+		position: relative;
+	}
+	
+	header {
+		width: 100%;
+		height: 290px;
+		position: relative;
+		background: url(workspace/images/header-background.jpg);
+		#logo {
+			position: absolute;
+			top: 88px;
+			right: 88px;
+			width: 161px;
+			height: 109px;
+			img {
+				width: 161px;
+				height: 109px;
+			}
+		}
+		span {
+			font-family: @heading-font-face;
+			font-size: 70px;
+			color: white;
+			font-weight: bold;
+			position: absolute;
+			left: 57px;
+			top: 80px;
+		}
+	}
+	
+	footer {
+		width: 100%;
+		height: 100px;
+		background: url(workspace/images/footer-background.png);
+	}	
+	
+	#sub-footer {
+		background: none;
+		box-shadow: none;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		color: #0681cc;
+		font-size: 13px;
+		padding-left: 10px;
+		a,a:link,a:visited {
+			color: #0681cc;
+		}
+	}
+	
+/* @end Layout */
+
+/* @group Form tweaks */
+
+	.pure-skin-colliers .pure-form select {
+		font-size: 100%;
+	}
+	.pure-skin-colliers .pure-form select:focus,
+	.pure-skin-colliers .pure-form input[type="text"]:focus,
+	.pure-skin-colliers .pure-form input[type="number"]:focus {
+		outline: none;
+	}
+	
+	.pure-button.pure-button-larger {
+		font-size: 100%;
+		font-weight: bold;
+		border-radius: 6px;
+		color: white;
+	}
+
+
+/* @end Layout */
+
+
+
+
+
+@import "public.less";
+@import "internal.less";

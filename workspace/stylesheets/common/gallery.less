@@ -1,0 +1,29 @@
+/* @group Photo Gallery */
+
+ul#photo-gallery-grid,
+#photo-gallery-grid li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#photo-gallery-grid a {
+	display: block;
+	float: left;
+	width: 135px;
+	height: 135px;
+	line-height: 135px;
+	text-align: center;
+	background: @tertiary;
+	border: 1px solid @secondary;
+	padding: 8px;
+	border-radius: 5px;
+	margin: 0 20px 20px 0;
+}
+
+#photo-gallery-grid a:hover {
+	background: @primary;
+	border-color: @primary;
+}
+
+/* @end */
