@@ -13,6 +13,7 @@
 		
 		<form method="post" class="pure-form" id="internal-survey-form">
 			<input name="action[internal-survey-submission]" type="hidden" value="Submit" />
+<!--
 			<div class="pure-control" style="text-align: right;">
 				<xsl:call-template name="form:select">
 					<xsl:with-param name="handle" select="'industry'"/>
@@ -22,6 +23,7 @@
 					</xsl:with-param>
 				</xsl:call-template>
 			</div>
+-->
 			
 			<xsl:apply-templates select="position-categories/entry" mode="table" />
 			

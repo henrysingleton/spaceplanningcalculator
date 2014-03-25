@@ -4,7 +4,7 @@ Options +FollowSymlinks -Indexes
 <IfModule mod_rewrite.c>
 
 	RewriteEngine on
-	RewriteBase /
+	RewriteBase /spaceplanningcalculator/
 
 	### SECURITY - Protect crucial files
 	RewriteRule ^manifest/(.*)$ - [F]

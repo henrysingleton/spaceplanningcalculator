@@ -108,7 +108,6 @@ var Site = {
 		
 		//for each of the fields calculate it and update it. 
 		$.each(Site.fields, function() {
-			console.log(typeof this.calculate);
 			if (typeof this.calculate == "function" && typeof this.update == "function") {
 				this.calculate();
 				this.update();

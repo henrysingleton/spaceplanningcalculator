@@ -35,6 +35,7 @@
 				<script type="text/javascript" src="{$workspace}/js/public.js"></script>
 				<script type="text/javascript" src="{$workspace}/data-sources/data.industries.json.js"></script>
 				<script type="text/javascript" src="{$workspace}/js/public.js"></script>
+				<script type="text/javascript" src="{$workspace}/js/internal.js"></script>
 			</head>
 			<body class="{$current-page} desktop pure-skin-spc">
 				<div id="shadow-container">

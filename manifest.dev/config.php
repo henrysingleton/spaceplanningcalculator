@@ -34,9 +34,9 @@
 		'database' => array(
 			'host' => '127.0.0.1',
 			'port' => '3306',
-			'user' => 'csc',
-			'password' => 'g2Rf??oc;(V.',
-			'db' => 'csc_symphony',
+			'user' => 'spc',
+			'password' => 'doctor',
+			'db' => 'spc',
 			'tbl_prefix' => 'sym_',
 		),
 		########
@@ -44,7 +44,7 @@
 
 		###### PUBLIC ######
 		'public' => array(
-			'display_event_xml_in_source' => 'yes',
+			'display_event_xml_in_source' => 'no',
 		),
 		########
 
